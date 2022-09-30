@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function timSo(arr) {
+        let index = 0;
+        for (let j = 0; j < 3; j++) {
+            var max = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i];
+                    index = i;
+                }
+            }
+            arr.splice(index, 1);
+        }
+        return max;
+    }
+       let arr = [1,2,3,4,5,9,6,7,10];
+       let newarr = timSo(arr);
+       alert(newarr);
+
+
+</script>
+</body>
+</html>
